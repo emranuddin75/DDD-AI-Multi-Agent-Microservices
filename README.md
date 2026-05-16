@@ -6,7 +6,7 @@ The system utilizes the **Magentic (Manager/Planner) Orchestration Pattern** to 
 
 ---
 
-## 🚀 Key Features
+## Key Features
 
 - **DDD Bounded Contexts**: 4 independent specialist agents (Market, Compliance, Costing, Reporting).
 - **Asynchronous Messaging**: Decoupled communication via RabbitMQ + MassTransit.
@@ -17,7 +17,7 @@ The system utilizes the **Magentic (Manager/Planner) Orchestration Pattern** to 
 
 ---
 
-## 🏗️ Architecture Overview
+## Architecture Overview
 
 ### Strategic Design: Bounded Context Map
 Intelligence is strategically distributed across four independent bubbles. Each agent operates within its own **Bounded Context**, ensuring the domain rules of "Costing" never interfere with "Compliance."
@@ -31,7 +31,7 @@ Inside each microservice, the **CQRS Pattern** separates high-latency AI reasoni
 
 ---
 
-## 🛤️ Operational Flow (Event Storming)
+## Operational Flow (Event Storming)
 
 The workflow is not a rigid script; it is a series of choreographed actions and reactive policies.
 
@@ -39,7 +39,21 @@ The workflow is not a rigid script; it is a series of choreographed actions and 
 
 ---
 
-## 🛠️ Specialized AI Workforce
+## Resilience: Eliminating the Single Point of Failure (SPOF)
+To achieve production-grade reliability, the Orchestrator has been refactored into a Resilient/Stateful component.
+
+![Eliminating the Single Point of Failure (SPOF)](https://static.prod-images.emergentagent.com/jobs/e085d1fb-6cc0-465a-a6dc-69a3d9ada55c/images/f833bf285f0d4068b5ce88fd37e698f42d40c530edd7a3a5916a3997801ab681.png)
+
+---
+
+## Tactical Implementation: Unified CQRS & MediatR
+Inside every microservice, the CQRS Pattern separates "Writing" (high-latency AI reasoning) from "Reading" (instant status updates).
+
+![Tactical Implementation: Unified CQRS & MediatR](https://static.prod-images.emergentagent.com/jobs/e085d1fb-6cc0-465a-a6dc-69a3d9ada55c/images/9c2100959480cd29c4022db7fdab28589eea1a88db4aecc354616e3440539751.png)
+
+---
+
+## Specialized AI Workforce
 
 | Bounded Context | Microservice | Model | Responsibility |
 |---|---|---|---|
@@ -50,7 +64,7 @@ The workflow is not a rigid script; it is a series of choreographed actions and 
 
 ---
 
-## 💻 Getting Started
+## Getting Started
 
 ### Prerequisites
 - [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0)
@@ -70,7 +84,7 @@ The workflow is not a rigid script; it is a series of choreographed actions and 
    ```bash
    dotnet test DomainAI.sln
    ```
-   *(91 tests should pass ✅)*
+   *(91 tests should pass )*
 
 ### Running the Ecosystem (Full Fleet)
 Run all 5 microservices and infrastructure:
@@ -80,7 +94,7 @@ docker-compose up --build
 
 ---
 
-## 📄 Documentation
+## Documentation
 For a deep dive into the design decisions, resilience patterns, and code structure, refer to the **[DESIGN.md](./DESIGN.md)** file.
 
 **The future of software is orchestrated.**
