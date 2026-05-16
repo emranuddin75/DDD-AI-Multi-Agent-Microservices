@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\DomainAI.Shared\DomainAI.Shared.csproj" />
+    <ProjectReference Include="..\DomainAI.Orchestrator\DomainAI.Orchestrator.csproj" />
+    <ProjectReference Include="..\DomainAI.Agents.MarketTrends\DomainAI.Agents.MarketTrends.csproj" />
+    <ProjectReference Include="..\DomainAI.Agents.Compliance\DomainAI.Agents.Compliance.csproj" />
+    <ProjectReference Include="..\DomainAI.Agents.Costing\DomainAI.Agents.Costing.csproj" />
+    <ProjectReference Include="..\DomainAI.Agents.Reporting\DomainAI.Agents.Reporting.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MassTransit" Version="8.2.5" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="8.2.5" />
+    <PackageReference Include="MediatR" Version="14.1.0" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.7" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.7" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="10.0.7" />
+    <PackageReference Include="StackExchange.Redis" Version="2.8.16" />
+  </ItemGroup>
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+</Project>

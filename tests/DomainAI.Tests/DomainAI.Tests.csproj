@@ -1,0 +1,39 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <IsPackable>false</IsPackable>
+    <IsTestProject>true</IsTestProject>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" Version="6.0.0" />
+    <PackageReference Include="MassTransit" Version="8.2.5" />
+    <PackageReference Include="MediatR" Version="14.1.0" />
+    <PackageReference Include="Microsoft.Extensions.AI" Version="10.5.2" />
+    <PackageReference Include="Microsoft.Extensions.AI.Abstractions" Version="10.5.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="10.0.7" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="10.0.7" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.8.0" />
+    <PackageReference Include="Moq" Version="4.20.72" />
+    <PackageReference Include="xunit" Version="2.5.3" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.5.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\DomainAI.Shared\DomainAI.Shared.csproj" />
+    <ProjectReference Include="..\..\src\DomainAI.Orchestrator\DomainAI.Orchestrator.csproj" />
+    <ProjectReference Include="..\..\src\DomainAI.Agents.MarketTrends\DomainAI.Agents.MarketTrends.csproj" />
+    <ProjectReference Include="..\..\src\DomainAI.Agents.Compliance\DomainAI.Agents.Compliance.csproj" />
+    <ProjectReference Include="..\..\src\DomainAI.Agents.Costing\DomainAI.Agents.Costing.csproj" />
+    <ProjectReference Include="..\..\src\DomainAI.Agents.Reporting\DomainAI.Agents.Reporting.csproj" />
+  </ItemGroup>
+
+</Project>
